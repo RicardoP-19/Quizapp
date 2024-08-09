@@ -4,6 +4,10 @@ body {
   align-items: center;
 }
 
+.d-none {
+  display: none;
+}
+
 .main-content {
   display: flex;
   width: 100%;
@@ -15,17 +19,112 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  /* background-color: rgb(1, 60, 255); */
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .start-content {
-  background-image: url(./img/brain.png);
-  /* background-repeat: no-repeat; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/brain.png);
   background-size: cover;
   background-position: center;
   width: 100vw;
 }
 
+.start-content {
+  text-align: center;
+}
+
 .nav-link {
   color: white !important;
-} 
+}
+
+.quiz-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/question-mark.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blur-container {
+  width: 50%;
+  height: 60%;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.44);
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.quiz-list {
+  width: 44%;
+}
+
+.quiz-list .list-group-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+
+.quiz-btn {
+  display: flex;
+  justify-content: inherit;
+  align-items: center;
+  width: 100%;
+}
+
+.pushable {
+  background: hsl(0, 0%, 64%);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform: rotateX(10deg);
+  transform-origin: bottom;
+}
+
+.front {
+  display: block;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background: linear-gradient(145deg, #f0f0f0, #d3d3d3);
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: translateY(-4px);
+}
+
+.pushable:active .front {
+  transform: translateY(0px);
+}

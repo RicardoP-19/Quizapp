@@ -20,10 +20,10 @@
     <title>Quiz App</title>
   </head>
 
-  <body>
+  <body onload="init()">
     <div class="main-content">
       <div class="sidebar p-5 mb-2 bg-primary text-white">
-          <img class="mb-5" src="./img/logo.png"/>
+        <img class="mb-5" src="./img/logo.png" />
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link disabled" aria-current="page" href="#">HTML</a>
@@ -32,7 +32,7 @@
             <a class="nav-link disabled" href="#">CSS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">JS</a>
+            <a class="nav-link disabled" href="#">JavaScript</a>
           </li>
           <li class="nav-item mb-5">
             <a class="nav-link disabled" aria-disabled="true">Java</a>
@@ -40,9 +40,76 @@
         </ul>
       </div>
       <div class="start-content">
-        <span>
-          <h1>Welcome to <br> The Awesome HTML Quiz</h1>
+        <span class="d-none">
+          <h1>
+            Welcome to <br />
+            The Awesome HTML Quiz
+          </h1>
         </span>
+        <div class="quiz-main-content">
+          <div class="blur-container">
+            <div class="quiz">
+              <h2 class="text-white">Wer hat HTML erfunden?</h2>
+              <div class="quiz-list">
+                <ul class="list-group">
+                  <li class="list-group-item mb-1">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    <span><strong>First checkbox</strong></span>
+                  </li>
+                  <li class="list-group-item mb-1">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    <span><strong>First checkbox</strong></span>
+                  </li>
+                  <li class="list-group-item mb-1">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    <span><strong>First checkbox</strong></span>
+                  </li>
+                  <li class="list-group-item mb-1">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    <span><strong>First checkbox</strong></span>
+                  </li>
+                  <li class="list-group-item mb-1">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    <span><strong>First checkbox</strong></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="quiz-btn">
+                <span id="current-status" class="text-white">
+                  
+                </span>
+                <button class="pushable">
+                  <span class="front">&rArr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -40,70 +40,56 @@
         </ul>
       </div>
       <div class="start-content">
-        <span class="d-none">
-          <h1>
-            Welcome to <br />
-            The Awesome HTML Quiz
-          </h1>
-        </span>
         <div class="quiz-main-content">
-          <div class="blur-container">
+          <div id="end-screen" class="end-container" style="display: none">
+            <div class="info-container">
+              <div>
+                <img src="img/finish_logo.png" alt="Finish" />
+              </div>
+              <div>
+                <span><b>COMPLETE <br/>HTML Quiz</b></span>
+              </div>
+              <div class="score-container">
+                <span><b>YOUR SCORE</b></span>
+                <span><b id="amount-of-right-questions"></b> / <b id="amount-of-questions"></b></span>
+              </div>
+              <button onclick="restartGame()" class="end-button">
+                <span class="botton-front">
+                  Erneut Spielen
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="question-body" class="blur-container">
             <div class="quiz">
-              <h2 class="text-white">Wer hat HTML erfunden?</h2>
+              <h2 id="questiontext" class="text-white"></h2>
               <div class="quiz-list">
                 <ul class="list-group">
-                  <li class="list-group-item mb-1">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value=""
-                      aria-label="..."
-                    />
-                    <span><strong>First checkbox</strong></span>
+                  <li class="list-group-item mb-1" onclick="answer('answer_1')">
+                    <span id="answer_1"><strong></strong></span>
                   </li>
-                  <li class="list-group-item mb-1">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value=""
-                      aria-label="..."
-                    />
-                    <span><strong>First checkbox</strong></span>
+                  <li class="list-group-item mb-1" onclick="answer('answer_2')">
+                    <span id="answer_2"><strong></strong></span>
                   </li>
-                  <li class="list-group-item mb-1">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value=""
-                      aria-label="..."
-                    />
-                    <span><strong>First checkbox</strong></span>
+                  <li class="list-group-item mb-1" onclick="answer('answer_3')">
+                    <span id="answer_3"><strong></strong></span>
                   </li>
-                  <li class="list-group-item mb-1">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value=""
-                      aria-label="..."
-                    />
-                    <span><strong>First checkbox</strong></span>
-                  </li>
-                  <li class="list-group-item mb-1">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value=""
-                      aria-label="..."
-                    />
-                    <span><strong>First checkbox</strong></span>
+                  <li class="list-group-item mb-1" onclick="answer('answer_4')">
+                    <span id="answer_4"><strong></strong></span>
                   </li>
                 </ul>
               </div>
               <div class="quiz-btn">
-                <span id="current-status" class="text-white">
-                  
+                <span class="text-white">
+                  <b id="question-number">1</b> von
+                  <b id="all-questions"></b> Fragen
                 </span>
-                <button class="pushable">
+                <button
+                  onclick="nextQuestion()"
+                  id="next-button"
+                  disabled
+                  class="pushable"
+                >
                   <span class="front">&rArr;</span>
                 </button>
               </div>
